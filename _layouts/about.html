@@ -17,9 +17,90 @@
         </div>
         <div class="post">
           {{ content }}
+          <div id="anniversary">
+            <p>自2025年第一个月起 · Csx和Zl已经正式在一起 <a href="javascript:void(0);" onclick="showBlessing()"><span id="days-together" class="bounce"></span></a></span> 天了！</p>
+          </div>
         </div>
+        <p id="blessing" style="color: #e91e63; font-weight: bold; margin-top: 10px;"></p>
       </div>
     </div>
+    <style>
+
+
+      /* 心跳动画 */
+      @keyframes heartbeat {
+        0%, 100% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.2);
+        }
+        50% {
+          transform: scale(0.9);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+      }
+
+      .heart {
+        display: inline-block;
+        animation: heartbeat 1.5s infinite;
+        color: #e91e63; /* 粉色，象征爱情 */
+      }
+
+      #blessing {
+        color: #d12cc9 !important;
+        font-weight: bold;
+        margin-top: 10px;
+        opacity: 0; /* 初始透明度为 0 */
+        transition: opacity 0.5s ease-in-out; /* 设置淡入淡出的过渡效果 */
+      }
+    </style>
+    <script>
+      // 设置在一起的起始日期
+      const startDate = new Date('2025-01-01');
+      const today = new Date();
+      const diffTime = Math.abs(today - startDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById('days-together').textContent = diffDays;
+
+      // 随机语数组
+      const blessings = [
+        "哼唧唧",
+        "晚安啦宝宝",
+        "晚安啦宝子",
+        "爱你",
+        "躺沙发听歌",
+        "港式肥汁米线",
+        "好的宝子",
+        "好的宝宝",
+        "到公司了宝子",
+        "到公司了宝宝",
+        "到家了宝子",
+        "到家了宝宝",
+        "我又梦到你了宝子",
+        "哈哈哈",
+        "给你买了两个短袖宝子",
+        "爱你爱你！"
+      ];
+
+      // 显示随机语
+      function showBlessing() {
+        const randomIndex = Math.floor(Math.random() * blessings.length);
+        const blessingText = blessings[randomIndex];
+        const blessingElement = document.getElementById('blessing');
+
+        // 设置语内容并淡入
+        blessingElement.textContent = blessingText;
+        blessingElement.style.opacity = 1;
+
+        // 1秒后淡出
+        setTimeout(() => {
+          blessingElement.style.opacity = 0;
+        }, 1500); // 1500ms = 1.5秒
+      }
+    </script>
   </body>
   {% include footer.html %}
 </html>

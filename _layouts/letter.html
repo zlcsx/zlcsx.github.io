@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div id="container">
+      <div class="site">
+        <!-- <div id="page_header">
+          <div id="page_title">
+            <h1>💌 给zl<span class="heart">💕</span>的信</h1>
+          </div>
+          <div id="page_meta">
+            <span class="page_meta_date">
+              &#91;&nbsp;{{ site.time | date_to_long_string }}&nbsp;&#93;
+            </span>
+          </div>
+        </div> -->
+        
+        <div class="letter-container">
+          <!-- 可以在这里放置多封信件 -->
+          <div class="letter">
+            <div class="letter-date">2025年2月14日</div>
+            <div class="letter-content">
+              <p>亲爱的宝宝：</p>
+              
+              <p>还记得你写给我的电子版的信吗？每次读到，心里都会泛起一阵暖意... 哈哈我也要给宝宝写一封电子版的信！</p>
+              
+              <p>和你在一起的每一天，我都觉得无比踏实与幸福。你说遇到我是幸运，但明明是我中了人生头等奖呀！超级喜欢宝宝的拥抱，拥抱时，你总把脸埋在我脖子边蹭蹭，其实你不知道，那时候我的心跳声大得恐怕整个楼道都听得见！闻到你的味道，感受到你的温度，所有的疲惫和不开心都会烟消云散。</p>
+              
+              <p>以前总觉得<b>命中注定</b>太俗气，直到你带着一身温柔闯进来。会在元宵节我加班时默默煮好汤圆并用保温杯装起来带我给我。会给我送牙膏、日历和袜子这些小礼物...<br>原来最动人的情话，都藏在你那些「细节」里，这样的你，简直是全世界偷偷为我定制的浪漫。</p>
+
+              <p>我常常想象我们未来的家——周末在沙发上追剧、一起做饭、散步，这些平凡的场景就像散落的珍珠被串成了无价的项链，在时光里愈发动人。</p>
+              
+              <p>谢谢你出现在我的生命里，像一束光，照亮了我的世界。而最奇妙的是，你不仅给了我一个值得期待的未来，更我让珍惜每一刻的现在。</p>
+
+              <p>原来所谓幸福，就是当你出现后，连最普通的星期二下午，都开始闪闪发光✨</p>
+              
+              <p class="letter-signature">永远爱你的<br>csx<span class="heart">💕</span></p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    
+    <style>
+      .letter-container {
+        max-width: 800px;
+        margin: 0 auto;
+        /* padding: 20px; */
+      }
+      
+      .letter {
+        background-color: #fff9f9;
+        border: 1px solid #ffd6e7;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+      }
+      
+      .letter:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        right: 30px;
+        height: 3px;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      }
+      
+      .letter-date {
+        color: #e91e63;
+        font-size: 14px;
+        margin-bottom: 15px;
+        text-align: right;
+      }
+      
+      .letter-content {
+        line-height: 1.8;
+        font-size: 16px;
+      }
+      
+      .letter-content p {
+        margin-bottom: 15px;
+      }
+      
+      .letter-signature {
+        text-align: right;
+        font-style: italic;
+        margin-top: 30px;
+      }
+      
+      /* 心跳动画 - 保持与about.html一致 */
+      @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        25% { transform: scale(1.2); }
+        50% { transform: scale(0.9); }
+        75% { transform: scale(1.1); }
+      }
+      
+      .heart {
+        display: inline-block;
+        animation: heartbeat 1.5s infinite;
+        color: #e91e63;
+      }
+      
+    </style>
+  
+  </body>
+  <div class="footer">
+    <p>Copyright © 2025-{{ site.time | date: "%Y" }}&nbsp;|&nbsp;csx写给zl的信.</p>
+  </div>
+  
+</html>
